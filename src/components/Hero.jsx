@@ -1,44 +1,31 @@
 import { useRef, useEffect } from 'react'
 
-// Web-optimized background video served from the range-request media server
-const BG_VIDEO = 'http://localhost:5174/Video/Edited/NAYC Concert Cover BG.mp4'
-
-// The concert opens with a ~15s cinematic fade-from-black — skip past it
-const START_OFFSET = 15
+// YouTube embed for hero background video (NAYC Concert Cover)
+const YT_BG_ID = '-sJXkfJ_I7M'
 
 export default function Hero({ visible }) {
-  const videoRef = useRef(null)
-
-  useEffect(() => {
-    const video = videoRef.current
-    if (!video) return
-
-    const startPlayback = () => {
-      video.currentTime = START_OFFSET
-      video.play().catch(() => {})
-    }
-
-    if (visible) {
-      if (video.readyState >= 1) {
-        startPlayback()
-      } else {
-        video.addEventListener('loadedmetadata', startPlayback, { once: true })
-      }
-    }
-  }, [visible])
-
   return (
     <section className="hero section">
-      <video
-        ref={videoRef}
-        className="hero-bg"
-        src={BG_VIDEO}
-        autoPlay
-        muted
-        loop
-        playsInline
-        preload="auto"
-      />
+      <div className="hero-bg">
+        <iframe
+          src={`https://www.youtube.com/embed/${YT_BG_ID}?autoplay=1&mute=1&loop=1&playlist=${YT_BG_ID}&controls=0&showinfo=0&rel=0&modestbranding=1&playsinline=1&start=15`}
+          title="Hero background video"
+          allow="autoplay; encrypted-media"
+          allowFullScreen
+          style={{
+            position: 'absolute',
+            top: '50%',
+            left: '50%',
+            width: '100vw',
+            height: '56.25vw',
+            minHeight: '100vh',
+            minWidth: '177.77vh',
+            transform: 'translate(-50%, -50%)',
+            border: 'none',
+            pointerEvents: 'none',
+          }}
+        />
+      </div>
       <div className="hero-overlay" />
 
       <div className={`hero-content${visible ? ' hero-content--visible' : ''}`}>
