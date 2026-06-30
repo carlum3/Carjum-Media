@@ -47,7 +47,7 @@ export default function App() {
         <Contact />
 
         <footer className="footer">
-          <p>© 2025 Carjum Media · San Francisco, CA</p>
+          <p>© 2026 Carjum Media · San Francisco, CA</p>
         </footer>
       </div>
 
