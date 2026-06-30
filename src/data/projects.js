@@ -45,8 +45,8 @@ export const projects = [
     subtitle: 'Sports',
     category: 'Sports Commercial',
     year: '2025',
-    youtubeId: '',
-    src: '',
+    youtubeId: '79FuqC5jRGw',
+    src: 'https://www.youtube.com/embed/79FuqC5jRGw',
     poster: '/posters/05.jpg',
   },
   {
@@ -75,8 +75,8 @@ export const projects = [
     subtitle: '29th Edition',
     category: 'Live Event',
     year: '2025',
-    youtubeId: '',
-    src: '',
+    youtubeId: 'E0spPP0nnO4',
+    src: 'https://www.youtube.com/embed/E0spPP0nnO4',
     poster: '/posters/08.jpg',
   },
   {
@@ -115,8 +115,8 @@ export const projects = [
     subtitle: 'Church Promo',
     category: 'Church Promo',
     year: '2025',
-    youtubeId: '',
-    src: '',
+    youtubeId: '_AyBJ6H_HMw',
+    src: 'https://www.youtube.com/embed/_AyBJ6H_HMw',
     poster: '/posters/12.jpg',
   },
   {
