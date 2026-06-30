@@ -1,5 +1,3 @@
-export const MEDIA = 'http://localhost:5174'
-
 export const projects = [
   {
     id: '01',
@@ -7,7 +5,8 @@ export const projects = [
     subtitle: 'Alett',
     category: 'Concert Film',
     year: '2024',
-    src: `${MEDIA}/Video/Edited/NAYC Concert Alett.mp4`,
+    youtubeId: 'mOPXuOBDvkI',
+    src: 'https://www.youtube.com/embed/mOPXuOBDvkI',
     poster: '/posters/01.jpg',
   },
   {
@@ -16,7 +15,8 @@ export const projects = [
     subtitle: 'Live',
     category: 'Concert Film',
     year: '2024',
-    src: `${MEDIA}/Video/Edited/NAYC Concert.mp4`,
+    youtubeId: 'Bz6tTbA5is8',
+    src: 'https://www.youtube.com/embed/Bz6tTbA5is8',
     poster: '/posters/02.jpg',
   },
   {
@@ -25,7 +25,8 @@ export const projects = [
     subtitle: 'Celebration',
     category: 'Event Film',
     year: '2024',
-    src: `${MEDIA}/Video/Edited/Quince.mp4`,
+    youtubeId: 'jnzm61Svcsw',
+    src: 'https://www.youtube.com/embed/jnzm61Svcsw',
     poster: '/posters/03.jpg',
   },
   {
@@ -34,7 +35,8 @@ export const projects = [
     subtitle: 'Music Video',
     category: 'Music Video',
     year: '2024',
-    src: `${MEDIA}/Video/Edited/Let's take a ride.mp4`,
+    youtubeId: 'A0ARt-NHTzQ',
+    src: 'https://www.youtube.com/embed/A0ARt-NHTzQ',
     poster: '/posters/04.jpg',
   },
   {
@@ -43,7 +45,8 @@ export const projects = [
     subtitle: 'Sports',
     category: 'Sports Commercial',
     year: '2025',
-    src: `${MEDIA}/S5 Content/Edited/Pickleball PROMO.mp4`,
+    youtubeId: '',
+    src: '',
     poster: '/posters/05.jpg',
   },
   {
@@ -52,7 +55,8 @@ export const projects = [
     subtitle: 'Worship',
     category: 'Worship Film',
     year: '2025',
-    src: `${MEDIA}/S5 Content/Edited/S5 Stories/Lift you up.mp4`,
+    youtubeId: 'frlaLNlo9yE',
+    src: 'https://www.youtube.com/embed/frlaLNlo9yE',
     poster: '/posters/06.jpg',
   },
   {
@@ -61,7 +65,8 @@ export const projects = [
     subtitle: 'Worship',
     category: 'Worship Film',
     year: '2025',
-    src: `${MEDIA}/S5 Content/Edited/S5 Stories/Take Control 1.mp4`,
+    youtubeId: 'zx3IbyXzvEw',
+    src: 'https://www.youtube.com/embed/zx3IbyXzvEw',
     poster: '/posters/07.jpg',
   },
   {
@@ -70,7 +75,8 @@ export const projects = [
     subtitle: '29th Edition',
     category: 'Live Event',
     year: '2025',
-    src: `${MEDIA}/S5 Content/Edited/Rally 29TH Shout.mp4`,
+    youtubeId: '',
+    src: '',
     poster: '/posters/08.jpg',
   },
   {
@@ -79,7 +85,8 @@ export const projects = [
     subtitle: 'Rally 29th',
     category: 'Live Event',
     year: '2025',
-    src: `${MEDIA}/S5 Content/Edited/Rally 29TH Jesus Be the Name.mp4`,
+    youtubeId: '_F3kNdaFJZw',
+    src: 'https://www.youtube.com/embed/_F3kNdaFJZw',
     poster: '/posters/09.jpg',
   },
   {
@@ -88,7 +95,8 @@ export const projects = [
     subtitle: '29th Edition',
     category: 'Live Event',
     year: '2025',
-    src: `${MEDIA}/S5 Content/Edited/Rally 29TH Altar.mp4`,
+    youtubeId: '8XIgPMwACXM',
+    src: 'https://www.youtube.com/embed/8XIgPMwACXM',
     poster: '/posters/10.jpg',
   },
   {
@@ -97,7 +105,8 @@ export const projects = [
     subtitle: 'Personal',
     category: 'Personal Film',
     year: '2024',
-    src: `${MEDIA}/Video/Edited/Nate's Cake Day.mp4`,
+    youtubeId: 'AejsXV81dog',
+    src: 'https://www.youtube.com/embed/AejsXV81dog',
     poster: '/posters/11.jpg',
   },
   {
@@ -106,7 +115,8 @@ export const projects = [
     subtitle: 'Church Promo',
     category: 'Church Promo',
     year: '2025',
-    src: `${MEDIA}/S5 Content/Edited/Rally 6TH Promo.mp4`,
+    youtubeId: '',
+    src: '',
     poster: '/posters/12.jpg',
   },
   {
@@ -115,7 +125,8 @@ export const projects = [
     subtitle: 'Spanish Edition',
     category: 'Church Promo',
     year: '2025',
-    src: `${MEDIA}/S5 Content/Edited/Rally Promo 29TH Spanish.mp4`,
+    youtubeId: 'CXVb4KNcoqY',
+    src: 'https://www.youtube.com/embed/CXVb4KNcoqY',
     poster: '/posters/13.jpg',
   },
 ]
