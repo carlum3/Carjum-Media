@@ -1,9 +1,9 @@
 import { useRef, useEffect } from 'react'
 
-// Web-optimized background video served from the range-request media server
-const BG_VIDEO = 'http://localhost:5174/Video/Edited/NAYC Concert Cover BG.mp4'
+const BG_VIDEO = import.meta.env.VITE_MEDIA_URL
+  ? `${import.meta.env.VITE_MEDIA_URL}/hero-bg.mp4`
+  : 'http://localhost:5174/Video/Edited/NAYC Concert Cover BG.mp4'
 
-// The concert opens with a ~15s cinematic fade-from-black — skip past it
 const START_OFFSET = 15
 
 export default function Hero({ visible }) {

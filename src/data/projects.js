@@ -1,4 +1,10 @@
-export const MEDIA = 'http://localhost:5174'
+const PROD_MEDIA = import.meta.env.VITE_MEDIA_URL
+const DEV_MEDIA = 'http://localhost:5174'
+
+// In production (VITE_MEDIA_URL set), videos are simple numbered files on Hostinger.
+// In dev, full paths are served from the local range-request media server.
+const src = (num, devPath) =>
+  PROD_MEDIA ? `${PROD_MEDIA}/${num}.mp4` : `${DEV_MEDIA}/${devPath}`
 
 export const projects = [
   {
@@ -7,7 +13,7 @@ export const projects = [
     subtitle: 'Alett',
     category: 'Concert Film',
     year: '2024',
-    src: `${MEDIA}/Video/Edited/NAYC Concert Alett.mp4`,
+    src: src('01', 'Video/Edited/NAYC Concert Alett.mp4'),
     poster: '/posters/01.jpg',
   },
   {
@@ -16,7 +22,7 @@ export const projects = [
     subtitle: 'Live',
     category: 'Concert Film',
     year: '2024',
-    src: `${MEDIA}/Video/Edited/NAYC Concert.mp4`,
+    src: src('02', 'Video/Edited/NAYC Concert.mp4'),
     poster: '/posters/02.jpg',
   },
   {
@@ -25,7 +31,7 @@ export const projects = [
     subtitle: 'Celebration',
     category: 'Event Film',
     year: '2024',
-    src: `${MEDIA}/Video/Edited/Quince.mp4`,
+    src: src('03', 'Video/Edited/Quince.mp4'),
     poster: '/posters/03.jpg',
   },
   {
@@ -34,7 +40,7 @@ export const projects = [
     subtitle: 'Music Video',
     category: 'Music Video',
     year: '2024',
-    src: `${MEDIA}/Video/Edited/Let's take a ride.mp4`,
+    src: src('04', "Video/Edited/Let's take a ride.mp4"),
     poster: '/posters/04.jpg',
   },
   {
@@ -43,7 +49,7 @@ export const projects = [
     subtitle: 'Sports',
     category: 'Sports Commercial',
     year: '2025',
-    src: `${MEDIA}/S5 Content/Edited/Pickleball PROMO.mp4`,
+    src: src('05', 'S5 Content/Edited/Pickleball PROMO.mp4'),
     poster: '/posters/05.jpg',
   },
   {
@@ -52,7 +58,7 @@ export const projects = [
     subtitle: 'Worship',
     category: 'Worship Film',
     year: '2025',
-    src: `${MEDIA}/S5 Content/Edited/S5 Stories/Lift you up.mp4`,
+    src: src('06', 'S5 Content/Edited/S5 Stories/Lift you up.mp4'),
     poster: '/posters/06.jpg',
   },
   {
@@ -61,7 +67,7 @@ export const projects = [
     subtitle: 'Worship',
     category: 'Worship Film',
     year: '2025',
-    src: `${MEDIA}/S5 Content/Edited/S5 Stories/Take Control 1.mp4`,
+    src: src('07', 'S5 Content/Edited/S5 Stories/Take Control 1.mp4'),
     poster: '/posters/07.jpg',
   },
   {
@@ -70,7 +76,7 @@ export const projects = [
     subtitle: '29th Edition',
     category: 'Live Event',
     year: '2025',
-    src: `${MEDIA}/S5 Content/Edited/Rally 29TH Shout.mp4`,
+    src: src('08', 'S5 Content/Edited/Rally 29TH Shout.mp4'),
     poster: '/posters/08.jpg',
   },
   {
@@ -79,7 +85,7 @@ export const projects = [
     subtitle: 'Rally 29th',
     category: 'Live Event',
     year: '2025',
-    src: `${MEDIA}/S5 Content/Edited/Rally 29TH Jesus Be the Name.mp4`,
+    src: src('09', 'S5 Content/Edited/Rally 29TH Jesus Be the Name.mp4'),
     poster: '/posters/09.jpg',
   },
   {
@@ -88,7 +94,7 @@ export const projects = [
     subtitle: '29th Edition',
     category: 'Live Event',
     year: '2025',
-    src: `${MEDIA}/S5 Content/Edited/Rally 29TH Altar.mp4`,
+    src: src('10', 'S5 Content/Edited/Rally 29TH Altar.mp4'),
     poster: '/posters/10.jpg',
   },
   {
@@ -97,7 +103,7 @@ export const projects = [
     subtitle: 'Personal',
     category: 'Personal Film',
     year: '2024',
-    src: `${MEDIA}/Video/Edited/Nate's Cake Day.mp4`,
+    src: src('11', "Video/Edited/Nate's Cake Day.mp4"),
     poster: '/posters/11.jpg',
   },
   {
@@ -106,7 +112,7 @@ export const projects = [
     subtitle: 'Church Promo',
     category: 'Church Promo',
     year: '2025',
-    src: `${MEDIA}/S5 Content/Edited/Rally 6TH Promo.mp4`,
+    src: src('12', 'S5 Content/Edited/Rally 6TH Promo.mp4'),
     poster: '/posters/12.jpg',
   },
   {
@@ -115,7 +121,7 @@ export const projects = [
     subtitle: 'Spanish Edition',
     category: 'Church Promo',
     year: '2025',
-    src: `${MEDIA}/S5 Content/Edited/Rally Promo 29TH Spanish.mp4`,
+    src: src('13', 'S5 Content/Edited/Rally Promo 29TH Spanish.mp4'),
     poster: '/posters/13.jpg',
   },
 ]
