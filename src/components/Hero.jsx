@@ -7,38 +7,28 @@ const BG_VIDEO = import.meta.env.VITE_MEDIA_URL
 const START_OFFSET = 15
 
 export default function Hero({ visible }) {
-  const videoRef = useRef(null)
-
-  useEffect(() => {
-    const video = videoRef.current
-    if (!video) return
-
-    const startPlayback = () => {
-      video.currentTime = START_OFFSET
-      video.play().catch(() => {})
-    }
-
-    if (visible) {
-      if (video.readyState >= 1) {
-        startPlayback()
-      } else {
-        video.addEventListener('loadedmetadata', startPlayback, { once: true })
-      }
-    }
-  }, [visible])
-
   return (
     <section className="hero section">
-      <video
-        ref={videoRef}
-        className="hero-bg"
-        src={BG_VIDEO}
-        autoPlay
-        muted
-        loop
-        playsInline
-        preload="auto"
-      />
+      <div className="hero-bg">
+        <iframe
+          src={`https://www.youtube.com/embed/${YT_BG_ID}?autoplay=1&mute=1&loop=1&playlist=${YT_BG_ID}&controls=0&showinfo=0&rel=0&modestbranding=1&playsinline=1&start=15`}
+          title="Hero background video"
+          allow="autoplay; encrypted-media"
+          allowFullScreen
+          style={{
+            position: 'absolute',
+            top: '50%',
+            left: '50%',
+            width: '100vw',
+            height: '56.25vw',
+            minHeight: '100vh',
+            minWidth: '177.77vh',
+            transform: 'translate(-50%, -50%)',
+            border: 'none',
+            pointerEvents: 'none',
+          }}
+        />
+      </div>
       <div className="hero-overlay" />
 
       <div className={`hero-content${visible ? ' hero-content--visible' : ''}`}>
